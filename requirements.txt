@@ -6,3 +6,4 @@ langchain_experimental
 numexpr
 chromadb
 beautifulsoup4
+protobuf==3.20
