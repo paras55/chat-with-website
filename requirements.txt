@@ -5,3 +5,4 @@ langchain-community
 langchain_experimental
 numexpr
 chromadb
+beautifulsoup4
