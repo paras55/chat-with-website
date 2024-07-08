@@ -59,6 +59,29 @@ This Streamlit application allows users to chat with an AI assistant that has kn
    - The model is given the context from the retrieved chunks and the chat history
    - It then generates a response based on this information
 
+## Flow Chart
+
+The following flow chart illustrates the main steps of the Multi-Website Chatbot process:
+
+```mermaid
+graph TD
+    A[Start] --> B[Enter Website URLs]
+    B --> C{Process Websites?}
+    C -->|Yes| D[Fetch Content with WebBaseLoader]
+    C -->|No| B
+    D --> E[Split Content into Chunks]
+    E --> F[Create Vector Store]
+    F --> G[Wait for User Query]
+    G --> H[Retrieve Relevant Chunks]
+    H --> I[Generate Response with LLM]
+    I --> J[Display Response to User]
+    J --> K{Continue Chatting?}
+    K -->|Yes| G
+    K -->|No| L[End]
+```
+
+This flow chart provides a high-level overview of how the Multi-Website Chatbot processes information and interacts with the user.
+
 ## Key Components
 
 - `get_vectorstore_from_urls(urls)`: Processes multiple websites and creates a vector store
