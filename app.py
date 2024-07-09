@@ -25,6 +25,9 @@ def get_vectorstore_from_urls(urls):
     
     # Create a vectorstore from the chunks
     vector_store = Chroma.from_documents(document_chunks, OpenAIEmbeddings(api_key=openAI_api_key))
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
     return vector_store
 
