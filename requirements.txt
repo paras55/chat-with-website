@@ -4,7 +4,7 @@ langchain
 langchain-community
 langchain_experimental
 numexpr
-chromadb
+chromadb==0.3.29
 beautifulsoup4
 protobuf==3.20
 pysqlite3-binary
